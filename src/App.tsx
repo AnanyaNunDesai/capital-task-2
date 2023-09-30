@@ -1,15 +1,31 @@
-import React from 'react';
+// import React from 'react';
 import './App.css';
-import { CarryOutOutlined, CheckCircleOutlined, CloseCircleOutlined, DownOutlined, FileTextOutlined, HeartOutlined, HomeOutlined, LeftOutlined, MailOutlined, ReadOutlined, SettingOutlined, ShareAltOutlined, TagOutlined, UserOutlined, WifiOutlined } from '@ant-design/icons';
+import { CarryOutOutlined, 
+DownOutlined, ExclamationCircleOutlined, FileTextOutlined, HeartOutlined, 
+HomeOutlined, LeftOutlined, MailOutlined, ReadOutlined, SearchOutlined, 
+SettingOutlined, ShareAltOutlined, TagOutlined, UserDeleteOutlined, WifiOutlined,
+UserAddOutlined , TeamOutlined} from '@ant-design/icons';
+import { Button, Dropdown, Input, MenuProps, Space } from 'antd';
+
+//unused:  CheckCircleOutlined, CloseCircleOutlined, UserOutlined, 
 
 function App() {
+  const items: MenuProps['items'] = [
+    {
+      key: '1',
+      label: (
+        <p>Placeholder</p>
+      ),
+    }
+  ];
+
   return (
     <div>
       <div className='navbar'>
         <div className='nav-section'>
           <div className='circle icon' />
           <HomeOutlined className='icon active' />
-          <UserOutlined className='icon' />
+          <TeamOutlined  className='icon' />
           <CarryOutOutlined className='icon' />
           <ShareAltOutlined className='icon' />
           <FileTextOutlined className='icon' />
@@ -27,7 +43,7 @@ function App() {
         <div className='content-column'>
           <div className='header'>
             <div className='program'>
-              <h2 className='program-title'>London Internship Program</h2>
+              <h2 className='secondary-color'>London Internship Program</h2>
               <p>London</p>
             </div>
             <div className='dropdown'>
@@ -41,10 +57,10 @@ function App() {
                 <TagOutlined className='small-icon' />
               </button>
               <button className='action-button'>
-                <CloseCircleOutlined className='small-icon delete' />
+                <UserDeleteOutlined className='small-icon delete' />
               </button>
               <button className='action-button'>
-                <CheckCircleOutlined className='small-icon' />
+                <UserAddOutlined  className='small-icon' />
               </button>
               <button className='action-button'>
                 <WifiOutlined className='small-icon' />
@@ -60,6 +76,58 @@ function App() {
               </button>
             </div>
           </div>
+          <div className='candidate-query'></div>
+            <Input className='medium-length' size='large' placeholder='Search by name, edu, exp or #tag' prefix={<SearchOutlined className='small-icon' />} suffix={<ExclamationCircleOutlined className='small-icon' />} />
+            <div className='filter-list'>
+              <div className='medium-length filter-description'>
+                <h5>Filters</h5>
+                <p>0 selected</p>
+              </div>
+              <Dropdown menu={{ items }} className='medium-length'>
+                <Button className='filter-detail'>
+                  <div className='filter-prefix'>
+                    <FileTextOutlined />
+                    <p>Personal Information</p>
+                  </div>
+                  <DownOutlined className='secondary-color' />
+                </Button>
+              </Dropdown>
+              <Dropdown menu={{ items }} className='medium-length'>
+                <Button className='filter-detail'>
+                  <div className='filter-prefix'>
+                    <FileTextOutlined />
+                    <p>Education</p>
+                  </div>
+                  <DownOutlined className='secondary-color' />
+                </Button>
+              </Dropdown>
+              <Dropdown  menu={{ items }} className='medium-length'>
+                <Button className='filter-detail'>
+                  <div className='filter-prefix'>
+                    <FileTextOutlined />
+                    <p>Work Experience</p>
+                  </div>
+                  <DownOutlined className='secondary-color' />
+                </Button>
+              </Dropdown>
+              <Dropdown  menu={{ items }} className='medium-length'>
+                <Button className='filter-detail'>
+                  <div className='filter-prefix'>
+                    <FileTextOutlined />
+                    <p>Activity Filter</p>
+                  </div>
+                  <DownOutlined className='secondary-color' />
+                </Button>
+              </Dropdown>
+              <Dropdown menu={{ items }} className='medium-length'>
+                <Button className='filter-detail'>
+                  <div className='filter-prefix'>
+                    <FileTextOutlined />
+                    <p>Advanced Filter</p>
+                  </div>
+                </Button>
+              </Dropdown>
+            </div>
         </div>
       </div>
     </div>

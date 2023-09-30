@@ -1,6 +1,8 @@
 body {
   background-color: #F9FAFF;
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .navbar {
@@ -67,6 +69,7 @@ body {
   position: fixed;
   width: 100vw;
   margin-top: 1%;
+  margin-left: 10%;
 }
 
 .content-column {
@@ -80,9 +83,10 @@ body {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
+  gap: 5%;
 }
 
 .program {
@@ -92,7 +96,7 @@ body {
   padding-top: 1%;
 }
 
-.program-title {
+.secondary-color {
   color: #1D4ED8;
 }
 
@@ -164,3 +168,45 @@ body {
   height: 100%;
   background-color: white;
 }
+
+.candidate-query {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.medium-length {
+  width: 25%;
+}
+
+.filter-list {
+  margin-top: 2%;
+}
+
+.filter-description {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 12%;
+}
+
+.filter-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 12%;
+}
+
+.filter-prefix {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 3%;
+  width: 50%;
+}
+
