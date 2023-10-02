@@ -1,0 +1,61 @@
+.candidate-box {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.row-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.taglist {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2%;
+    height: 15%;
+    margin-top: 0.25rem;
+}
+
+.hashtag-item {
+    font-size: 0.75rem;
+}
+
+.tag-item {
+    color: #037092;
+    background-color: #F3FAFC;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.candidate-avatar {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #D0E1FF;
+    background-color: #EDF4FF;
+    font-weight: bold;
+}
